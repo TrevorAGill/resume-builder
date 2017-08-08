@@ -29,6 +29,6 @@ html {
     margin: 10px;
 }
 .form-control {
+text-align: center;
 width: 50%;
-border: white;
 }

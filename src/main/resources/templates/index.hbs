@@ -1,5 +1,5 @@
 {{#partial "content"}}
-
+    <div class="container">
    <h1>My Resume</h1>
 
    {{#if allJobs}}
@@ -41,6 +41,7 @@
        <button type="submit" class="btn btn-default">Add new Job</button>
    </form>
 
+
     <form action="/delete" method="post">
         <div class="form-control">
             <label for="deleteNumber">Delete Post Number</label>
@@ -48,6 +49,7 @@
         </div>
         <button type="submit" class="btn btn-default">Delete Job</button>
     </form>
+    </div>
 
 {{/partial}}
 
