@@ -21,9 +21,13 @@ public class Job {
         jobCount += 1;
     }
 
-    public static ArrayList<Job> deleteJob(int getJobCount, ArrayList<Job> allJobs){
-        allJobs.remove(getJobCount-1);
-        return allJobs;
+    public static ArrayList<Job> deleteJob(int getJobCount, ArrayList<Job> allJobs) {
+        if (getJobCount > allJobs.size() || getJobCount <= 0) {
+            return null;
+        } else {
+            allJobs.remove(getJobCount - 1);
+            return allJobs;
+        }
     }
 
     public String getTitle() {
