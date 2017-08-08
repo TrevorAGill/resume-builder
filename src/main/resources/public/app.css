@@ -2,7 +2,7 @@ h1, h2, h3, h4 {
   font-family:sans-serif;
 }
 
-h3, .form-group {
+h3, p, .form-group {
   font-size: 24px;
   color: 	white;
   margin: 5 px;
@@ -15,6 +15,7 @@ h1 {
 
 body {
   background-color: #a1dfff;
+  background-image: url("../images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -30,5 +31,4 @@ html {
 .form-control {
 width: 50%;
 border: white;
-background-color: #a1dfff;
 }

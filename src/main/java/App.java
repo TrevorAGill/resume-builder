@@ -17,6 +17,16 @@ public class App {
             model.put("allJobs",allJobs);
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+        post("/delete" , (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Job> allJobs = Job.getAll();
+            model.put("allJobs",allJobs);
+            int deleteJob = Integer.parseInt(request.queryParams("deleteNumber"));
+            ArrayList newJobList = Job.deleteJob(deleteJob,allJobs);
+            model.put("deleteJob",deleteJob);
+            response.redirect("/");
+            return null;
+        });
         post("/job/new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String title = request.queryParams("title");

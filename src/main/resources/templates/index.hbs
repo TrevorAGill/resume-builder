@@ -9,6 +9,7 @@
        <p>Company Location: {{companyLocation}}</p>
        <p>Description: {{description}}</p>
        <p>Dates of Employment: {{datesOfEmployment}}</p><!--show-->
+       <p>-------------------------------</p>
        {{/each}}
    {{else}} <!--no posts!-->
     <p>No jobs added!</p>
@@ -39,6 +40,14 @@
     </div>
        <button type="submit" class="btn btn-default">Add new Job</button>
    </form>
+
+    <form action="/delete" method="post">
+        <div class="form-control">
+            <label for="deleteNumber">Delete Post Number</label>
+            <input id="deleteNumber" name="deleteNumber" type="number">
+        </div>
+        <button type="submit" class="btn btn-default">Delete Job</button>
+    </form>
 
 {{/partial}}
 

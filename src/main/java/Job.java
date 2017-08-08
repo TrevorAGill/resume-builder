@@ -9,6 +9,7 @@ public class Job {
     private String datesOfEmployment;
 
     public static ArrayList<Job> allJobs = new ArrayList<Job>();
+    public static int jobCount = 0;
 
     public Job(String title,String companyName,String companyLocation,String description,String datesOfEmployment){
         this.title = title;
@@ -17,6 +18,12 @@ public class Job {
         this.description = description;
         this.datesOfEmployment = datesOfEmployment;
         allJobs.add(this);
+        jobCount += 1;
+    }
+
+    public static ArrayList<Job> deleteJob(int getJobCount, ArrayList<Job> allJobs){
+        allJobs.remove(getJobCount-1);
+        return allJobs;
     }
 
     public String getTitle() {
