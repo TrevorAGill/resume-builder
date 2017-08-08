@@ -1,0 +1,45 @@
+{{#partial "content"}}
+
+   <h1>My Resume</h1>
+
+   {{#if allJobs}}
+       {{#each allJobs}} <!--loop-->
+       <p>Job Title:{{title}}</p>
+       <p>Company Name: {{companyName}}</p>
+       <p>Company Location: {{companyLocation}}</p>
+       <p>Description: {{description}}</p>
+       <p>Dates of Employment: {{datesOfEmployment}}</p><!--show-->
+       {{/each}}
+   {{else}} <!--no posts!-->
+    <p>No jobs added!</p>
+   {{/if}}
+
+   <p>Add a new Job to your resume:</p>
+
+   <form action="/job/new" method="post">
+       <div class="form-control">
+       <label for="title">Job Title</label>
+       <input id="title" name="title" type="text">
+       </div>
+       <div class="form-control">
+       <label for="companyName">Company Name</label>
+       <input id="companyName" name="companyName" type="text">
+       </div>
+       <div class="form-control">
+       <label for="companyLocation">Company Location</label>
+       <input id="companyLocation" name="companyLocation" type="text">
+       </div>
+       <div class="form-control">
+       <label for="description">Description of Job</label>
+       <input id="description" name="description" type="text">
+       </div>
+    <div class="form-control">
+       <label for="datesOfEmployment">Date of Employment</label>
+       <input id="datesOfEmployment" name="datesOfEmployment" type="text">
+    </div>
+       <button type="submit" class="btn btn-default">Add new Job</button>
+   </form>
+
+{{/partial}}
+
+{{> layout.hbs}}
